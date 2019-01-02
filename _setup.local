@@ -1,0 +1,33 @@
+# Set a location of generated datasets, following is the default setting.
+FOLDER = '../quantify-your-year/src/'
+
+# NAME
+NAME = '<YOUR_NAME>'
+
+# Set a gender as female, male or other
+GENDER = '<YOUR_GENDER>'
+
+# set year (e.g., 2018)
+YEAR = <YEAR>
+
+# Set timezone, for example: 'America/Los_Angeles'
+# Refer https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+DEFAULT_TIMEZONE = '<ADD_TIMEZONE_HERE>'
+
+# Account name
+TWITTER = '<YOUR_TWITTER_ACCOUNT>'
+GOOGLE = '<YOUR_GOOGLE_ACCOUNT>'
+
+# Google Location History - set a place name and location
+# latitude and longitude with 7 decimals of precision
+# if the place name has a space, use underscore.
+
+# e.g. 'my_home', 37.2342341, -112.1122343
+PLACE = '<PLACE_NAME>'
+LAT = <ADD_LATITUDE>
+LON = <ADD_LONGITUDE>
+
+# car name
+CAR = '<CAR NAME>'
+
+
