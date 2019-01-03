@@ -58,6 +58,14 @@ settings = dict(
         dataSource=dict(name='Metromile', url='https://www.metromile.com/'),
         decimal=2,
         considerFrequency=True
+    ),
+    facebook=dict(
+        gender='female',
+        pastVerb='reacted on Facebook',
+        type='count',
+        metric='reaction',
+        dataSource=dict(name='Facebook', url='https://www.facebook.com/'),
+        considerFrequency=False
     )
 )
 

@@ -2,7 +2,7 @@
 
 Various datasets generators for [Quantify Your Year project](http://tany.kim/quantify-your-year)
 
-This repo includes dataset generators of tweets, location history, step/floor counter, electricity usage, car odometer. Depending on the availability of your data sources, use the generators.
+This repo includes dataset generators of reactions on Facebook, tweets, location history, step/floor counter, electricity usage, car odometer. Depending on the availability of your data sources, use the generators.
 
 Each python file generates both setting and dataset json files for the front-end visualization. 
 
@@ -24,6 +24,15 @@ Then copy the setting to a Python file.
 ```
 cp _setup.local _setup.py
 ```
+
+# Reactions on Facebook
+
+Count daily reactions (like, love, haha and etc) on Facebook. This requires a Facebook account.
+
+1. Download your Facebook information 'Likes and Reactions' from privacy setting. 
+2. Find ```posts_and_comments.json``` and copy under ```/data``` folder.
+3. Run ```facebook-reaction-tracker.py```.
+
 
 # Tweet Counter
 
