@@ -66,7 +66,14 @@ settings = dict(
         metric='reaction',
         dataSource=dict(name='Facebook', url='https://www.facebook.com/'),
         considerFrequency=False
-    )
+    ),
+    piano=dict(
+        gender='female',
+        pastVerb='played the piano',
+        type='duration',
+        metric='minute',
+        considerFrequency=True
+    ),
 )
 
 # save setting as json
