@@ -20,18 +20,21 @@ def getTimeZonedTime(ts):
     return utc.astimezone(DEFAULT_TIMEZONE)
 
 # load google map history data
-with open('data/Location History.json') as file:
+with open('data/Location History-2019.json') as file:
     data = json.load(file)
 
     # check single traces
-    for i in range(len(data['locations'])):
-        trace = data['locations'][i]
+    location_data = sorted(data['locations'], key=lambda i: int(i['timestampMs']), reverse=True)
+
+    for i in range(len(location_data)):
+        trace = location_data[i]
 
         # all data is set to UTC, convert to the timezone of the home location
         current_time = getTimeZonedTime(trace['timestampMs'])
 
         # check only the selected year
         year = int(current_time.year)
+
         if year == YEAR:
 
             # get the format as date, as a key of dataset
@@ -47,7 +50,7 @@ with open('data/Location History.json') as file:
 
             # probably the location - some lat and log are slightly off, this could be an acceptable range
             if abs(home_lat_rounded - rounded_lat) <= 2 and abs(home_lon_rounded - rounded_lon) <= 2:
-                prev_time = getTimeZonedTime(data['locations'][i + 1]['timestampMs'])
+                prev_time = getTimeZonedTime(location_data[i + 1]['timestampMs'])
 
                 # if different date
                 if datetime.isocalendar(current_time) != datetime.isocalendar(prev_time):
@@ -80,5 +83,6 @@ for d in by_date:
     if hour > 0.0:
         data_of_year.insert(0, dict(date=d, value=hour))
 
+print (data_of_year)
 # save datasets
 _savedatasets.save_dataset(data_of_year, _setup.GOOGLE, 'time-at-' + _setup.PLACE, 'location')

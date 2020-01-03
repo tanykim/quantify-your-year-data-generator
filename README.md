@@ -40,7 +40,10 @@ Count daily tweets. This requires you have an active Twitter account.
 
 1. Download the archive on your twitter account page.
 2. Copy ```tweets.csv``` under ```/data``` folder.
-2. Run ```tweet-counter.py```.
+3. Run ```tweet-counter.py```.
+
+It looks like if you have too many tweets, csv file isn't generated. Then we will use ```tweet.js``` and ```tweet-part1.js```; 
+remove the variable name and save those files as JSON. Then move those files to under ```/data``` folder, run ```tweet-counter-json.py```.
 
 # Location History Tracker
 
