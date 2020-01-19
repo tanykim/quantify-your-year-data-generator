@@ -14,7 +14,7 @@ data_of_year = []
 def addDate(date):
     data_of_year.insert(0, dict(date=date, value=1))
 
-def getTweetInfo(d):
+def getScrobble(d):
     date = d.strftime('%-m/%-d/%-Y')
     if len(data_of_year) == 0:
         addDate(date)
@@ -31,7 +31,7 @@ with open('data/' + _setup.LASTFM + '.csv', newline='') as csvfile:
         date = utc_date.astimezone(DEFAULT_TIMEZONE)
         year = int(date.year)
         if year == YEAR:
-            getTweetInfo(date)
+            getScrobble(date)
         elif year < YEAR:
             break
 
