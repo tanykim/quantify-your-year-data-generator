@@ -86,5 +86,5 @@ Count how many songs scrobbled to your Last.fm account. This requires you go to 
 
 1. Enter your Last.fm username and click fetch tracks.
 2. Save as ```lastfmusername.csv``` under ```/data```.
-3. Open the csv file and add a coloumn named ```date``` on the first D coloumn.
+3. Open the csv file and add a column named ```date``` on the first D column.
 3. Run ```lastfm-scrobble-counter.py```.
