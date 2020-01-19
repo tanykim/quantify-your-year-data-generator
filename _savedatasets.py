@@ -74,6 +74,15 @@ settings = dict(
         metric='minute',
         considerFrequency=True
     ),
+    lastfm=dict(
+        gender='male',
+        pastVerb='listened to',
+        pastVerb_2='listened to music for',
+        type='duration',
+        metric='song',
+        considerFrequency=True
+    )
+
 )
 
 # save setting as json
