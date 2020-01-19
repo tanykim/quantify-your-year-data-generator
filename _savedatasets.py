@@ -75,7 +75,7 @@ settings = dict(
         considerFrequency=True
     ),
     lastfm=dict(
-        gender='male',
+        gender='_setup.GENDER',
         pastVerb='listened to',
         pastVerb_2='listened to music for',
         type='duration',
