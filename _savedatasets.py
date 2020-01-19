@@ -79,6 +79,7 @@ settings = dict(
         pastVerb='listened to',
         pastVerb_2='listened to music for',
         type='duration',
+        dataSource=dict(name='Lastfm', url='http://www.last.fm/'),
         metric='song',
         considerFrequency=True
     )
