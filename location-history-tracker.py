@@ -20,7 +20,7 @@ def getTimeZonedTime(ts):
     return utc.astimezone(DEFAULT_TIMEZONE)
 
 # load google map history data
-with open('data/Location History-2019.json') as file:
+with open('data/Location History.json') as file:
     data = json.load(file)
 
     # check single traces
@@ -84,5 +84,6 @@ for d in by_date:
         data_of_year.insert(0, dict(date=d, value=hour))
 
 print (data_of_year)
+
 # save datasets
 _savedatasets.save_dataset(data_of_year, _setup.GOOGLE, 'time-at-' + _setup.PLACE, 'location')

@@ -71,6 +71,7 @@ def generate_data_by_date(apple_data_type, dataset_name, data_type):
     # sort by date; often date isn't ordered in the original data
     data_of_year = sorted(data_of_year, key=lambda i: datetime.strptime(i['date'], '%m/%d/%Y').timestamp())
     # save data as json
+    # print (data_of_year)
     _savedatasets.save_dataset(data_of_year, _setup.NAME, dataset_name, data_type)
 
 generate_data_by_date('HKQuantityTypeIdentifierStepCount', 'steps', 'steps')

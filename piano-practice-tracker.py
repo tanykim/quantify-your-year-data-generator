@@ -12,6 +12,7 @@ import _savedatasets
 # run the following script:
 # $ gsjson 1zFSHMbYUnu9cm3pU4rxPcfHPnRBhBiXKnM0OiUTJ6RQ data/piano-2019.json -b -l
 
+YEAR = _setup.YEAR
 data_of_year = []
 
 def add_date(date, duration):

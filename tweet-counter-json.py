@@ -31,13 +31,16 @@ for file_name in ['tweet', 'tweet-part1']:
     with open('data/' + file_name + '.json') as file:
         data = json.load(file)
         for d in data:
-            utc_date = datetime.strptime(d['created_at'], '%a %b %d %H:%M:%S %z %Y')
+            tweet = d['tweet']
+            utc_date = datetime.strptime(tweet['created_at'], '%a %b %d %H:%M:%S %z %Y')
             date = utc_date.astimezone(DEFAULT_TIMEZONE)
             if int(date.year) == YEAR:
-                tweets.append(dict(date=date, id=d['id_str']))
+                tweets.append(dict(date=date, id=tweet['id_str'], text=tweet['full_text']))
 
 # sort by date desc
 for tweet in sorted(tweets, key=lambda x: x['id'], reverse=True):
+    # if '체육관' in tweet['text'] or '운동' in tweet['text    ']:
+    #     print (tweet['date'], tweet['text'])
     get_tweet_info(tweet['date'])
 
 # save dataset
