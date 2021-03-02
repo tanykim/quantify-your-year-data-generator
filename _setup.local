@@ -18,6 +18,7 @@ DEFAULT_TIMEZONE = '<ADD_TIMEZONE_HERE>'
 TWITTER = '<YOUR_TWITTER_ACCOUNT>'
 GOOGLE = '<YOUR_GOOGLE_ACCOUNT>'
 FACEBOOK = '<YOUR_FACEBOOK_ACCOUNT>'
+LASTFM = '<YOUR_LASTFM_ACCOUNT>'
 
 # Google Location History - set a place name and location
 # latitude and longitude with 7 decimals of precision

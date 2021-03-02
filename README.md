@@ -79,3 +79,12 @@ Track the distance of daily driving. This requires you're a member of [Metromile
 1. Export your driving data.
 2. Copy ```all_driving-data``` folder under ```/data```.
 3. Run ```driving-tracking.py```.
+
+# Last.fm Scrobble Counter
+
+Count how many songs scrobbled to your Last.fm account. This requires you go to this [site](https://benjaminbenben.com/lastfm-to-csv/).
+
+1. Enter your Last.fm username and click fetch tracks.
+2. Save as ```lastfmusername.csv``` under ```/data```.
+3. Open the csv file and add a column named ```date``` on the first D column.
+3. Run ```lastfm-scrobble-counter.py```.
