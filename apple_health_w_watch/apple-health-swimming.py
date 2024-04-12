@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 
 print("Start parse.")
 
+# Parse export xml file - update your file path
 export = ET.parse('../data/apple_health_export-2023/export.xml')
 export_root = export.getroot()
 

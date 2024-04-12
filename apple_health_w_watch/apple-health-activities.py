@@ -30,11 +30,6 @@ with open(filename, 'w') as output_file:
     for stats in workout.findall('WorkoutStatistics'):
       if stats.get('type') == 'HKQuantityTypeIdentifierActiveEnergyBurned':
         output_file.write(stats.get('sum'))
-      # if stats.get('type') == 'HKQuantityTypeIdentifierDistanceSwimming':
-      #   output_file.write(stats.get('sum') + "," + stats.get('unit'))
-      # if 'HKQuantityTypeIdentifierDistanceSwimming' not in stats:
-      #   output_file.write("NULL,NULL")
-
     output_file.write("\n")
 
 print("Done.")

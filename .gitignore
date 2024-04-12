@@ -4,4 +4,5 @@ data/*
 .idea/*
 __pycache__/
 _setup.py
+apple_health_w_watch/*.csv
 
