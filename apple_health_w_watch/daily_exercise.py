@@ -69,7 +69,7 @@ for year in data_of_year:
 
 # save datasets
 for year in data_of_year:
-    if year > 2020 and year < 2024:
+    if year < 2024:
         json_data = json.dumps(data_of_year[year], separators=(',',':'), indent=2, ensure_ascii=False)
         fd = open('../../shades-of-exercise/src/data/data-' + str(year) + '.json', 'w', encoding='utf8')
         fd.write(json_data)

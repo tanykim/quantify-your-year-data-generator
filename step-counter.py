@@ -5,7 +5,7 @@ import _setup
 import _savedatasets
 
 # read xml files exported from iOS Health app
-tree = ET.parse('data/apple_health_export/export.xml')
+tree = ET.parse('data/apple_health_export-2023/export.xml')
 root = tree.getroot()
 
 YEAR = _setup.YEAR
@@ -16,18 +16,17 @@ def generate_data_by_date(apple_data_type, dataset_name, data_type):
     for child in root:
         attr = child.attrib
 
-        # fild the matching data type
-        if child.tag == 'Record' and attr['type'] == apple_data_type:
+        # find the matching data type - update to 'Watch' from 2021 data
+        if child.tag == 'Record' and attr['type'] == apple_data_type and 'iPhone' in attr['sourceName']:
 
             start_date = datetime.strptime(attr['startDate'], '%Y-%m-%d %H:%M:%S %z')
             end_date = datetime.strptime(attr['endDate'], '%Y-%m-%d %H:%M:%S %z')
-
             #check year
             if start_date.year == YEAR:
 
                 # step count & date
                 count = int(attr['value'])
-                date = datetime.strftime(start_date, '%-m/%-d/%Y')
+                date = datetime.strftime(start_date, '%-m/%-d/%Y')               
 
                 # check start and end date if count happens over two or more days
                 if datetime.isocalendar(start_date) != datetime.isocalendar(end_date):
